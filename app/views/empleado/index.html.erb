@@ -222,9 +222,17 @@
         <div class="card-footer text-muted">
           <button type="button" class="btn btn-primary btn-sm ">Actualizar</button>
           <button type="button" class="btn btn-info btn-sm ">Desactivar</button>
-          <button type="button" class="btn btn-danger btn-sm ">Eliminar</button>
+          <button type="button" class="btn btn-danger btn-sm" onclick="demo()">Eliminar</button>
         </div>
       </div>
     </div>
   </div>
 </div>
+
+<script type="text/javascript">
+  
+  function demo() {
+    alertify.confirm('Confirm Title', 'Confirm Message', function(){ alertify.success('Ok') }
+                , function(){ alertify.error('Cancel')});
+  }
+</script>

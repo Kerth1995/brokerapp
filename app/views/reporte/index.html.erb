@@ -1,6 +1,6 @@
 <div class="main_content">
   <div class="row">
-    <div class="col-md-12">
+    <div class="col-md-12 mb-3">
        <div class="header">
           <h4><span>Reportes</span></h4>
           <h6><span>Cálculo / Generación</span></h6>
@@ -39,19 +39,91 @@
         </div>
 
         <div class="col-lg-3 mb-3">
-        <label class="col-lg-12">Proyecto/Tarea</label>
-        <input type="number" class="form-control-sm col-md-12 form-control" placeholder="">
+          <label class="col-lg-12">Proyecto/Tarea</label>
+          <button class="btn btn-secondary btn-sm mb-2" data-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">
+            Click para abrir filtros
+          </button>
+          <div class="row">
+            <div class="col">
+              <div class="collapse multi-collapse" id="multiCollapseExample1">
+                <div class="card card-body">
+                  <label>Proyectos</label>
+                  <button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target=".bd-example-modal-lg">
+                    Buscar proyectos
+                  </button>
+                  <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalLabel">Lista de proyectos</h5>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <div class="modal-body">
+
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Cerrar</button>
+                          <button type="button" class="btn btn-primary btn-sm">agregar</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <label>Tareas</label>
+                  <button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target=".bd-example-modal-lg">
+                    Buscar tareas
+                  </button>
+                  <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalLabel">Lista de tareas</h5>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <div class="modal-body">
+
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Cerrar</button>
+                          <button type="button" class="btn btn-primary btn-sm">Agregar</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
 
         <div class="col-lg-3 mb-3">
         <label class="col-lg-12">Empleado</label>
-        <input type="number" class="form-control-sm col-md-12 form-control" placeholder="">
+        <button class="btn btn-secondary btn-sm mb-2" data-toggle="collapse" href="#multiCollapseExample2" role="button" aria-expanded="false" aria-controls="multiCollapseExample2">
+            Click para abrir filtros
+          </button>
+          <div class="row">
+            <div class="col">
+              <div class="collapse multi-collapse" id="multiCollapseExample2">
+                <div class="card card-body">
+                  <label>Empleados</label>
+                  <button type="button" class="btn btn-info btn-sm" data-toggle="modal" 
+                  data-target=".bd-example-modal-lg">
+                    Buscar Empleado
+                  </button>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       
       <div class="row">
         <div class="col-lg-4">
-        <button type="button" class="btn btn-primary btn-sm ">Crear Actividades</button>
+        <button type="button" class="btn btn-primary btn-sm ">Cargar reporte</button>
         </div>
         <div class="col-lg-4 text-center">
         </div>
@@ -72,7 +144,7 @@
             <div class="card-body">
                 <div class="row">
                     <div class="col-lg-12">
-                      <table class="table table-bordered" id="dataTable">
+                      <table class="table table-bordered table-responsive-xl" id="dataTable">
                           <thead>
                             <tr>
                               <th >Id</th>
@@ -97,25 +169,121 @@
                               <td>System Architect</td>
                               <td>Edinburgh</td>
                               <td>61</td>
+                              <td>Tiger Nixon</td>
+                              <td>System Architect</td>
+                              <td>Edinburgh</td>
+                              <td>61</td>
+                              <td>Tiger Nixon</td>
+                              <td>System Architect</td>
+                              <td>Edinburgh</td>
+                              <td>61</td>
+                              <td>Tiger Nixon</td>
                             </tr>
                             <tr>
                               <td>Tiger Nixon</td>
                               <td>System Architect</td>
                               <td>Edinburgh</td>
                               <td>61</td>
+                              <td>Tiger Nixon</td>
+                              <td>System Architect</td>
+                              <td>Edinburgh</td>
+                              <td>61</td>
+                              <td>Tiger Nixon</td>
+                              <td>System Architect</td>
+                              <td>Edinburgh</td>
+                              <td>61</td>
+                              <td>Tiger Nixon</td>
                             </tr>
                             <tr>
                               <td>Tiger Nixon</td>
                               <td>System Architect</td>
                               <td>Edinburgh</td>
                               <td>61</td>
+                              <td>Tiger Nixon</td>
+                              <td>System Architect</td>
+                              <td>Edinburgh</td>
+                              <td>61</td>
+                              <td>Tiger Nixon</td>
+                              <td>System Architect</td>
+                              <td>Edinburgh</td>
+                              <td>61</td>
+                              <td>Tiger Nixon</td>
                             </tr>
                             <tr>
                               <td>Tiger Nixon</td>
                               <td>System Architect</td>
                               <td>Edinburgh</td>
                               <td>61</td>
-                            </tr>  
+                              <td>Tiger Nixon</td>
+                              <td>System Architect</td>
+                              <td>Edinburgh</td>
+                              <td>61</td>
+                              <td>Tiger Nixon</td>
+                              <td>System Architect</td>
+                              <td>Edinburgh</td>
+                              <td>61</td>
+                              <td>Tiger Nixon</td>
+                            </tr>
+                            <tr>
+                              <td>Tiger Nixon</td>
+                              <td>System Architect</td>
+                              <td>Edinburgh</td>
+                              <td>61</td>
+                              <td>Tiger Nixon</td>
+                              <td>System Architect</td>
+                              <td>Edinburgh</td>
+                              <td>61</td>
+                              <td>Tiger Nixon</td>
+                              <td>System Architect</td>
+                              <td>Edinburgh</td>
+                              <td>61</td>
+                              <td>Tiger Nixon</td>
+                            </tr>
+                            <tr>
+                              <td>Tiger Nixon</td>
+                              <td>System Architect</td>
+                              <td>Edinburgh</td>
+                              <td>61</td>
+                              <td>Tiger Nixon</td>
+                              <td>System Architect</td>
+                              <td>Edinburgh</td>
+                              <td>61</td>
+                              <td>Tiger Nixon</td>
+                              <td>System Architect</td>
+                              <td>Edinburgh</td>
+                              <td>61</td>
+                              <td>Tiger Nixon</td>
+                            </tr>
+                            <tr>
+                              <td>Tiger Nixon</td>
+                              <td>System Architect</td>
+                              <td>Edinburgh</td>
+                              <td>61</td>
+                              <td>Tiger Nixon</td>
+                              <td>System Architect</td>
+                              <td>Edinburgh</td>
+                              <td>61</td>
+                              <td>Tiger Nixon</td>
+                              <td>System Architect</td>
+                              <td>Edinburgh</td>
+                              <td>61</td>
+                              <td>Tiger Nixon</td>
+                            </tr>
+                            <tr>
+                              <td>Tiger Nixon</td>
+                              <td>System Architect</td>
+                              <td>Edinburgh</td>
+                              <td>61</td>
+                              <td>Tiger Nixon</td>
+                              <td>System Architect</td>
+                              <td>Edinburgh</td>
+                              <td>61</td>
+                              <td>Tiger Nixon</td>
+                              <td>System Architect</td>
+                              <td>Edinburgh</td>
+                              <td>61</td>
+                              <td>Tiger Nixon</td>
+                            </tr>
                           </tbody>
                         </table>
                     </div>
@@ -125,4 +293,25 @@
       </div>
   </div>
 <div>
+
+
+<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Lista de empleados</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Cerrar</button>
+        <button type="button" class="btn btn-primary btn-sm">Agregar</button>
+      </div>
+    </div>
+  </div>
+</div>
 
