@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Brokeracidapp</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+  
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/site.css" type="text/css"/>
+
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <title>broker, acid!</title>
+
+  </head>
+
+  <body>
+      <nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
+          <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">BROKER ACID</a>
+          <ul class="navbar-nav px-3">
+              <li class="nav-item text-nowrap">
+                  <a class="nav-link" href="#"><i class="fas fa-power-off"></i> Salir</a>
+              </li>
+          </ul>
+
+      </nav>
+
+   
+<div class="container-fluid">
+    <div class="row">
+        <nav class="col-md-2 d-none d-md-block bg-light sidebar">
+            <div class="sidebar-sticky">
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">
+                            <i class="fas fa-home"></i>
+                            Dashboard <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="empleado.html">
+                            <i class="fas fa-user-friends"></i>
+                            Empleados
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="empleado.html">
+                            <i class="fas fa-user-friends"></i>
+                            Roles
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="proyecto.html">
+                            <i class="fas fa-project-diagram"></i>
+                            Proyectos
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="tarea.html">
+                            <i class="fas fa-tasks"></i>
+                            Tareas
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="incidencias.html">
+                            <i class="fas fa-user-secret"></i>
+                            Incidencias
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="cronograma.html">
+                            <i class="far fa-calendar-alt"></i>
+                            Cronogramas
+                        </a>
+                    </li>
+                </ul>
+                
+                <ul class="nav flex-column mb-2">
+                    <li class="nav-item">
+                        <a class="nav-link" href="reporte.html">
+                            <i class="fas fa-file-alt"></i>
+                            Reportes
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="estadistica.html">
+                            <i class="fas fa-signal"></i>
+                            Estadisticas
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+        </nav>
+
+        <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+        <%= yield %>
+        </main>
+    </div>
+</div>
+  </body>
+</html>
