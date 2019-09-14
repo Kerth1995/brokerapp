@@ -1,2 +1,166 @@
-<h1>Incidencia#index</h1>
-<p>Find me in app/views/incidencia/index.html.erb</p>
+<div class="main_content">
+  <div class="header col-lg-12 mb-3">
+      <h4><span>Incidencias</span></h4>
+      <h6><span>Creación / Edición</span></h6>
+  </div>
+
+  <div class="row">          
+    <div class="col-lg-5 mb-3">
+      <div class="card mb-3">
+        <div class="card-header">
+          <i class="fas fa-table"></i>Lista de Incidencias  
+        </div>
+          <div class="card-body">
+            <div class="table-responsive">
+              <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <thead>
+                  <tr>
+                    <th >Id</th>
+                    <th>Nombre</th>
+                    <th >Descripción</th>
+                    <th >Estado</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Tiger Nixon</td>
+                    <td>System Architect</td>
+                    <td>Edinburgh</td>
+                    <td>61</td>
+                  </tr>
+                  <tr>
+                    <td>Tiger Nixon</td>
+                    <td>System Architect</td>
+                    <td>Edinburgh</td>
+                    <td>61</td>
+                  </tr>
+                  <tr>
+                    <td>Tiger Nixon</td>
+                    <td>System Architect</td>
+                    <td>Edinburgh</td>
+                    <td>61</td>
+                  </tr>
+                  <tr>
+                    <td>Tiger Nixon</td>
+                    <td>System Architect</td>
+                    <td>Edinburgh</td>
+                    <td>61</td>
+                  </tr>  
+                </tbody>
+              </table>
+            </div>
+          </div>
+        <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
+      </div>
+    </div>
+
+    <div class="col-lg-7 mb-3">
+      <div class="card">
+        <div class="card-header">
+          Tarea Seleccionada
+          <div class="btn-group">
+            <button class="btn btn-secondary btn-sm dropdown-toggle float-right" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Acciones
+            </button>
+            <div class="dropdown-menu">
+              ...
+            </div>
+          </div>
+
+          <button type="button" class="btn btn-primary btn-sm float-right" data-toggle="modal" 
+                  data-target="#exampleModal">Nueva Incidencia
+          </button>
+
+          <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Nueva Incidencia</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <div class="form">
+                    <div class="form-row">
+                      <div class="form-group col-md-12">
+                        <label for="exampleInputEmail1" class="col-md-12">
+                          Sector y/o Rubro
+                        </label>
+                        <select class="form-control form-control-sm col-md-12">
+                          <option>Sector A</option>
+                          <option>Sector B</option>
+                          <option>Sector C</option>
+                        </select>
+                      </div>
+                      <div class="form-group col-md-12">
+                        <label for="inputPassword4" class="col-md-12">
+                          Nombre
+                        </label>
+                        <input type="text" class="form-control-sm col-md-12 form-control" placeholder="">
+                      </div>
+                      <div class="form-group col-md-12">
+                        <label for="inputPassword4" class="col-md-12">
+                          Descripción
+                        </label>
+                        <textarea class="form-control form-control-sm" rows="2">                           
+                        </textarea>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Cancelar</button>
+                  <button type="button" class="btn btn-primary btn-sm">Guardar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="form">
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="exampleInputEmail1" class="col-md-12">
+                  Sector y/o Rubro
+                </label>
+                <select class="form-control form-control-sm col-md-12">
+                  <option>Sector A</option>
+                  <option>Sector B</option>
+                  <option>Sector C</option>
+                </select>
+              </div>
+              <div class="form-group col-md-6">
+                <label for="inputPassword4" class="col-md-6">
+                  Nombre
+                </label>
+                <input type="text" class="form-control-sm col-md-12 form-control" placeholder="">
+              </div>
+              <div class="form-group col-md-6">
+                <label for="exampleInputEmail1" class="col-md-12">
+                  Estado
+                </label>
+                <select class="form-control form-control-sm col-md-12">
+                  <option>Activo</option>
+                  <option>Inactivo</option>
+                </select>
+              </div>
+              <div class="form-group col-md-6">
+                <label for="inputPassword4" class="col-md-6">
+                  Descripción
+                </label>
+                <textarea class="form-control form-control-sm" rows="2">                           
+                </textarea>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card-footer text-muted">
+          <button type="button" class="btn btn-primary btn-sm ">Actualizar</button>
+          <button type="button" class="btn btn-info btn-sm ">Desactivar</button>
+          <button type="button" class="btn btn-danger btn-sm ">Eliminar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

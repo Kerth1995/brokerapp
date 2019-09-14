@@ -38,61 +38,60 @@
             <div class="sidebar-sticky">
                 <ul class="nav flex-column">
                     <li class="nav-item">
-                        <a class="nav-link active" href="index.html">
-                            <i class="fas fa-home"></i>
-                            Dashboard <span class="sr-only">(current)</span>
-                        </a>
+                        <%= link_to '<i class="fas fa-home"></i> Dashboard'.html_safe, 
+                            home_index_path,
+                            Class:"nav-link "
+                        %>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="empleado.html">
-                            <i class="fas fa-user-friends"></i>
-                            Empleados
-                        </a>
+                        <%= link_to '<i class="fas fa-user-friends"></i> Empleados'.html_safe, 
+                            empleado_index_path,
+                            Class:"nav-link "
+                        %> 
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="empleado.html">
-                            <i class="fas fa-user-friends"></i>
-                            Roles
-                        </a>
+                        <%= link_to '<i class="fas fa-user-tag"></i> Roles'.html_safe, 
+                            rol_index_path,
+                            Class:"nav-link "
+                        %> 
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="proyecto.html">
-                            <i class="fas fa-project-diagram"></i>
-                            Proyectos
-                        </a>
+                        <%= link_to '<i class="fas fa-project-diagram"></i> Proyectos'.html_safe, 
+                            proyecto_index_path,
+                            Class:"nav-link "
+                        %> 
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="tarea.html">
-                            <i class="fas fa-tasks"></i>
-                            Tareas
-                        </a>
+                        <%= link_to '<i class="fas fa-tasks"></i> Tareas'.html_safe, 
+                            tarea_index_path,
+                            Class:"nav-link "
+                        %> 
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="incidencias.html">
-                            <i class="fas fa-user-secret"></i>
-                            Incidencias
-                        </a>
+                        <%= link_to '<i class="fas fa-user-secret"></i> Incidencias'.html_safe, 
+                            incidencia_index_path,
+                            Class:"nav-link "
+                        %>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="cronograma.html">
-                            <i class="far fa-calendar-alt"></i>
-                            Cronogramas
-                        </a>
+                        <%= link_to '<i class="fas fa-calendar-alt"></i> Cronogramas'.html_safe, 
+                            cronograma_index_path,
+                            Class:"nav-link "
+                        %> 
                     </li>
                 </ul>
                 
                 <ul class="nav flex-column mb-2">
-                    <li class="nav-item">
-                        <a class="nav-link" href="reporte.html">
-                            <i class="fas fa-file-alt"></i>
-                            Reportes
-                        </a>
+                        <%= link_to '<i class="fas fa-file-alt"></i> Reportes'.html_safe, 
+                            reporte_index_path,
+                            Class:"nav-link "
+                        %> 
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="estadistica.html">
-                            <i class="fas fa-signal"></i>
-                            Estadisticas
-                        </a>
+                        <%= link_to '<i class="fas fa-signal"></i> Estadistica'.html_safe, 
+                            estadistica_index_path,
+                            Class:"nav-link "
+                        %> 
                     </li>
 
                 </ul>
