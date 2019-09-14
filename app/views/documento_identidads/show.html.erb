@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @documento_identidad.nombre %>
+</p>
+
+<p>
+  <strong>Descripcion:</strong>
+  <%= @documento_identidad.descripcion %>
+</p>
+
+<%= link_to 'Edit', edit_documento_identidad_path(@documento_identidad) %> |
+<%= link_to 'Back', documento_identidads_path %>

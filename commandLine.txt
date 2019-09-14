@@ -4,3 +4,10 @@ rake db:migrate
 
 rails g scaffold usuario username:string email:string crypted_password:string salt:string
 rails g scaffold rol_usuario usuario_id:integer nombre:string
+
+
+rails g scaffold empleado id_tipo_documento:integer numero_documento:string{30} nombre:string{50} apellido_paterno:string{50} apellido_materno:string{50} id_privilegio:integer{4}
+
+rails g scaffold documentoIdentidad nombre:string{50} descripcion:string{100}
+
+rails g scaffold privilegioEmpleado nombre:string{50} descripcion:string{100}
