@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :usuarios
   root 'login#index'
   get 'estadistica/index'
   get 'reporte/index'
