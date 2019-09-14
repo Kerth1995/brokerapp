@@ -1,20 +1,23 @@
 <div class="wrapper fadeInDown">
-    <div id="formContent">
+  <div id="formContent">
 
-        <div class="fadeIn first">
-            <img src="http://icons.iconarchive.com/icons/graphicloads/100-flat/256/home-icon.png" id="icon" alt="User Icon" />
-            <h1>Broker ACID</h1>
-        </div>
-
-        <form>
-            <input type="text" id="login" class="fadeIn second" name="login" placeholder="Usuario" autocomplete="off">
-            <input type="text" id="password" class="fadeIn third" name="login" placeholder="Contraseña">
-            <input type="button" id="btnIngresar" class="fadeIn fourth" value="Ingresar">
-        </form>
-
-        <div id="formFooter">
-             <a class="underlineHover" href="#">Ir a la pagina</a>
-         </div>
-
+    <div class="fadeIn first">
+      <img src="http://icons.iconarchive.com/icons/graphicloads/100-flat/256/home-icon.png" id="icon" alt="User Icon"/>
+      <h1>Broker ACID</h1>
     </div>
+    <%= form_tag create_path, method: :post do %>
+
+      <%= text_field_tag :username, "", placeholder: "Ingrese usuario", class: "fadeIn second" %>
+
+      <%= password_field_tag :password, "", placeholder: "Contraseña", class: "fadeIn third" %>
+
+      <%= submit_tag "Iniciar Session", class: "fadeIn fourth" ,data: { disable_with: false }%>
+
+    <% end %>
+
+    <div id="formFooter">
+      <a class="underlineHover" href="#">Ir a la pagina</a>
+    </div>
+
+  </div>
 </div>
