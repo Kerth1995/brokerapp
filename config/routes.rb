@@ -18,7 +18,6 @@ Rails.application.routes.draw do
   get 'proyecto/index'
   get 'rol/index'
   get 'empleado/index'
-  #get 'home/index'
   get 'home/index'
   get 'login' => 'login#create', as: :create
   get 'usuarios/index'

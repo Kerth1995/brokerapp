@@ -1,4 +1,5 @@
 class UsuariosController < ApplicationController
+  before_action :require_login
   before_action :set_usuario, only: [:show, :edit, :update, :destroy]
 
   # GET /usuarios
@@ -62,13 +63,13 @@ class UsuariosController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_usuario
-      @usuario = Usuario.find(params[:id])
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_usuario
+    @usuario = Usuario.find(params[:id])
+  end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def usuario_params
-      params.require(:usuario).permit(:username, :email, :crypted_password, :salt)
-    end
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def usuario_params
+    params.require(:usuario).permit(:username, :email, :password, :password_confirmation)
+  end
 end
