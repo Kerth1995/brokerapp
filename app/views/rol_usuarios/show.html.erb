@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Usuario:</strong>
+  <%= @rol_usuario.usuario_id %>
+</p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @rol_usuario.nombre %>
+</p>
+
+<%= link_to 'Edit', edit_rol_usuario_path(@rol_usuario) %> |
+<%= link_to 'Back', rol_usuarios_path %>
