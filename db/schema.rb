@@ -10,7 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_09_14_210701) do
+ActiveRecord::Schema.define(version: 2019_09_14_234528) do
+
+  create_table "rols", force: :cascade do |t|
+    t.string "codigo", limit: 5
+    t.string "nombre", limit: 100
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "usuarios", force: :cascade do |t|
     t.string "username", null: false
