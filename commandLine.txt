@@ -3,6 +3,7 @@ rails g sorcery:install --model=usuario
 rake db:migrate
 
 rails g scaffold usuario username:string email:string crypted_password:string salt:string
+rails g scaffold rol codigo:string{5} nombre:string{100}
 rails g scaffold rol_usuario usuario_id:integer nombre:string
 
 

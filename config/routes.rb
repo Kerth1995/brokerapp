@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :rols
+  resources :rol_usuarios
   resources :tareas
   resources :privilegio_empleados
   resources :documento_identidads
@@ -23,5 +25,6 @@ Rails.application.routes.draw do
   get 'empleados/index'
   get 'documento_identidads/index'
   get 'privilegio_empleados/index'
+
 
 end
