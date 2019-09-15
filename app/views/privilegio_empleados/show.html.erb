@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @privilegio_empleado.nombre %>
+</p>
+
+<p>
+  <strong>Descripcion:</strong>
+  <%= @privilegio_empleado.descripcion %>
+</p>
+
+<%= link_to 'Edit', edit_privilegio_empleado_path(@privilegio_empleado) %> |
+<%= link_to 'Back', privilegio_empleados_path %>
