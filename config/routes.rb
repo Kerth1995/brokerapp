@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :tareas
   resources :privilegio_empleados
   resources :documento_identidads
   resources :empleados

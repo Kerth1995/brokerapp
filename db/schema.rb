@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_09_15_002717) do
+ActiveRecord::Schema.define(version: 2019_09_15_141720) do
 
   create_table "documento_identidads", force: :cascade do |t|
     t.string "nombre", limit: 50
@@ -40,6 +40,15 @@ ActiveRecord::Schema.define(version: 2019_09_15_002717) do
   create_table "rols", force: :cascade do |t|
     t.string "codigo", limit: 5
     t.string "nombre", limit: 100
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "tareas", force: :cascade do |t|
+    t.string "id_tarea", limit: 8, null: false
+    t.string "nombre", limit: 50, null: false
+    t.string "descripcion", limit: 500, null: false
+    t.integer "estado"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
