@@ -13,10 +13,7 @@
 
   <div class="field">
     <%= form.label :id_tipo_documento %>
-    <!--
     <%= form.number_field :id_tipo_documento %>
-    -->
-    <%= form.collection_select :id_tipo_documento, DocumentoIdentidad.order(nombre: :asc), :id, :nombre %>
   </div>
 
   <div class="field">
@@ -41,10 +38,7 @@
 
   <div class="field">
     <%= form.label :id_privilegio %>
-    <!--
-      <%= form.number_field :id_privilegio %>
-    -->
-    <%= form.collection_select :id_privilegio, PrivilegioEmpleado.order(nombre: :asc), :id, :nombre%>
+    <%= form.number_field :id_privilegio %>
   </div>
 
   <div class="actions">

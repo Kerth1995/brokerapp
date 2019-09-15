@@ -18,12 +18,12 @@
   <tbody>
     <% @empleados.each do |empleado| %>
       <tr>
-        <td><%= empleado.documento_identidad.nombre %></td>
+        <td><%= empleado.id_tipo_documento %></td>
         <td><%= empleado.numero_documento %></td>
         <td><%= empleado.nombre %></td>
         <td><%= empleado.apellido_paterno %></td>
         <td><%= empleado.apellido_materno %></td>
-        <td><%= empleado.privilegio_empleado.nombre %></td>
+        <td><%= empleado.id_privilegio %></td>
         <td><%= link_to 'Show', empleado %></td>
         <td><%= link_to 'Edit', edit_empleado_path(empleado) %></td>
         <td><%= link_to 'Destroy', empleado, method: :delete, data: { confirm: 'Are you sure?' } %></td>
