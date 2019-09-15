@@ -17,13 +17,8 @@ Rails.application.routes.draw do
   get 'empleado/index'
   #get 'home/index'
   get 'home/index'
-
   get 'login' => 'login#create', as: :create
- 
   get 'usuarios/index'
-
-
-  
   get 'empleados/index'
   get 'documento_identidads/index'
   get 'privilegio_empleados/index'

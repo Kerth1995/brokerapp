@@ -1,5 +1,3 @@
 class DocumentoIdentidad < ApplicationRecord
-	belongs_to :empleado	
-
-	has_many :empleados, :dependent => :destroy
+	belongs_to :empleado
 end
