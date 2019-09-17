@@ -1,3 +1,67 @@
+<div class="main_content">
+
+    <p id="notice"><%= notice %></p>
+
+  <div class="row">
+    <div class="header col-lg-12 mb-3">
+      <h4><span>Documentos de Identidad</span></h4>
+      <h6><span>Lista</span></h6>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="card">
+        <div class="card-header">
+          <div class="row">
+            <div class="col-lg-6">
+              <i class="fas fa-table"></i> Documentos de Identidad
+            </div>
+            <div class="col-lg-6 text-right">
+              <%= link_to 'Nuevo Documento'.html_safe, 
+                new_documento_identidad_path, Class:"btn btn-primary btn-sm"%> 
+            </div>
+          </div>
+        </div>
+        <div class="card-body">
+          <table class="table table table-hover table-bordered" id="example" >
+            <thead class="table-info">
+              <tr class="text-center">
+                <th>Nombre</th>
+                <th>Descripcion</th>
+                <th colspan="2">Acciones</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <% @documento_identidads.each do |documento_identidad| %>
+                <tr>
+                  <td><%= documento_identidad.nombre %></td>
+                  <td><%= documento_identidad.descripcion %></td>
+                  <td>
+                    <%= link_to '<i class="far fa-edit"></i>'.html_safe, 
+                      edit_documento_identidad_path(documento_identidad)
+                    %>
+                  </td>
+                  <td>
+                    <%= link_to '<i class="far fa-trash-alt"></i>'.html_safe, 
+                      documento_identidad, method: :delete, data: { confirm: 'Estás seguro de realizar cambio?' }
+                    %>
+                  </td>
+                </tr>
+              <% end %>
+            </tbody>
+          </table>
+        </div>
+        <div class="card-footer">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--
+
 <p id="notice"><%= notice %></p>
 
 <h1>Documento Identidads</h1>
@@ -27,3 +91,5 @@
 <br>
 
 <%= link_to 'New Documento Identidad', new_documento_identidad_path %>
+
+-->

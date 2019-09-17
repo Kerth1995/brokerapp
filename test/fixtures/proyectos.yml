@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  id_sector: 1
+  nombre: MyString
+  fecha_inicio: 2019-09-15
+  fecha_fin: 2019-09-15
+  descripcion: MyString
+
+two:
+  id_sector: 1
+  nombre: MyString
+  fecha_inicio: 2019-09-15
+  fecha_fin: 2019-09-15
+  descripcion: MyString

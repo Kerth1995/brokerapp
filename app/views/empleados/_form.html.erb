@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <div class="main_content">
   <div class="row">
       <div class="col-md-2">
@@ -7,78 +6,98 @@
 
       <div class="col-md-8">
 
-        <div class="card text-center">
+        <div class="card">
           <div class="card-header">
-            Featured
+            Empleado
           </div>
           <div class="card-body">
-            <div>
-              
-            </div>
-          </div>
-          <div class="card-footer text-muted">
+            <%= form_with(model: empleado, local: true) do |form| %>
+              <% if empleado.errors.any? %>
+                <div id="error_explanation">
+                  <h2><%= pluralize(empleado.errors.count, "error") %> prohibited this empleado from being saved:</h2>
 
-          </div>
-        </div>
-
-        <%= form_with(model: empleado, local: true) do |form| %>
-          <% if empleado.errors.any? %>
-            <div id="error_explanation">
-              <h2><%= pluralize(empleado.errors.count, "error") %> prohibited this empleado from being saved:</h2>
-
-              <ul>
-              <% empleado.errors.full_messages.each do |message| %>
-                <li><%= message %></li>
+                  <ul>
+                  <% empleado.errors.full_messages.each do |message| %>
+                    <li><%= message %></li>
+                  <% end %>
+                  </ul>
+                </div>
               <% end %>
-              </ul>
-            </div>
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <!--
+                    <%= form.label :numero_documento %>
+                  -->
+                  
+                  <!--
+                  <label for="inputEmail4">Documento</label>
+                    <%= form.collection_select :id_tipo_documento, DocumentoIdentidad.order(nombre: :asc), :id, :nombre%> 
+                  -->
+                  <!--
+                    <%= form.number_field :id_tipo_documento %>
+                    <input type="number" class="form-control form-control-sm" id="" <%= :id_tipo_documento %>>
+                  -->
+                  <label>Documento</label>
+                  <input type="number" class="form-control form-control-sm" id="" <%= form.number_field :id_tipo_documento %>
+                </div>
+                <div class="form-group col-md-6">
+                  <!--
+                    <%= form.label :numero_documento %>
+                  -->
+                  <label >Número Documento</label>
+                  <input type="text" class="form-control form-control-sm" id="" <%= form.text_field :numero_documento %>
+                </div>
+
+                <div class="form-group col-md-6">
+                  <!--
+                    <%= form.label :nombre %>
+                    <%= form.text_field :nombre %>
+                  -->
+                  <label >Nombres</label>
+                  <input type="text" class="form-control form-control-sm" id="" <%= form.text_field :nombre %>
+                </div>
+                <div class="form-group col-md-6">
+
+                  <!--
+                    <%= form.label :apellido_paterno %>
+                    <%= form.text_field :apellido_paterno %>
+                  -->
+                  <label >Apellido Paterno</label>
+                  <input type="text" class="form-control form-control-sm" id="" <%= form.text_field :apellido_paterno %>
+                </div>
+
+                <div class="form-group col-md-6">
+                  <!--
+                  <%= form.label :apellido_materno %>
+                  <%= form.text_field :apellido_materno %>
+                  -->
+                  <label >Apellido Materno</label>
+                  <input type="text" class="form-control form-control-sm" id="" <%= form.text_field :apellido_materno %>
+                </div>
+                <div class="form-group col-md-6">
+                  <!--
+                    <%= form.label :id_privilegio %>
+                    <%= form.number_field :id_privilegio %>
+                  -->
+                  
+                  <!--
+                    <%= form.collection_select :id_tipo_documento, PrivilegioEmpleado.order(nombre: :asc), :id, :nombre %>
+                  -->
+                  <label >Privilegio</label>
+                  <input type="number" class="form-control form-control-sm" id="" <%= form.text_field :id_privilegio %>
+                  
+                </div>
+              </div>
+              <div class=" col-md-12 text-center">
+                  <div class="actions">
+                    <%= form.submit %>
+                  </div>
+              </div>
+          </div>
+          <div class="card-footer">
+          </div>
           <% end %>
-
-          <div class="field">
-            <%= form.label :id_tipo_documento %>
-            <!--
-              <%= form.number_field :id_tipo_documento %>
-            -->
-
-              <%= form.collection_select :id_tipo_documento, DocumentoIdentidad.order(nombre: :asc), :id, :nombre %> 
-
-          </div>
-
-          <div class="field">
-            <%= form.label :numero_documento %>
-            <%= form.text_field :numero_documento %>
-          </div>
-
-          <div class="field">
-            <%= form.label :nombre %>
-            <%= form.text_field :nombre %>
-          </div>
-
-          <div class="field">
-            <%= form.label :apellido_paterno %>
-            <%= form.text_field :apellido_paterno %>
-          </div>
-
-          <div class="field">
-            <%= form.label :apellido_materno %>
-            <%= form.text_field :apellido_materno %>
-          </div>
-
-          <div class="field">
-            <%= form.label :id_privilegio %>
-            <!--
-              <%= form.number_field :id_privilegio %>
-            -->
-
-            <%= form.collection_select :id_tipo_documento, PrivilegioEmpleado.order(nombre: :asc), :id, :nombre %> 
-
-          </div>
-
-          <div class="actions">
-            <%= form.submit %>
-          </div>
-        <% end %>
-
+        </div>
       </div>
 
       <div class="col-md-2">
@@ -87,7 +106,7 @@
   </div>
 </div>
 
-
+<!--
 <%= form_with(model: empleado, local: true) do |form| %>
   <% if empleado.errors.any? %>
     <div id="error_explanation">
@@ -103,11 +122,9 @@
 
   <div class="field">
     <%= form.label :id_tipo_documento %>
-    <!--
-      <%= form.number_field :id_tipo_documento %>
-    -->
 
-      <%= form.collection_select :id_tipo_documento, DocumentoIdentidad.order(nombre: :asc), :id, :nombre %> 
+      <%= form.number_field :id_tipo_documento %>
+      
 
   </div>
 
@@ -133,11 +150,8 @@
 
   <div class="field">
     <%= form.label :id_privilegio %>
-    <!--
-      <%= form.number_field :id_privilegio %>
-    -->
-
-    <%= form.collection_select :id_tipo_documento, PrivilegioEmpleado.order(nombre: :asc), :id, :nombre %> 
+    <%= form.number_field :id_privilegio %>
+     
 
   </div>
 
@@ -145,62 +159,5 @@
     <%= form.submit %>
   </div>
 <% end %>
-=======
-<%= form_with(model: empleado, local: true) do |form| %>
-  <% if empleado.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(empleado.errors.count, "error") %> prohibited this empleado from being saved:</h2>
 
-      <ul>
-      <% empleado.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div class="field">
-    <%= form.label :id_tipo_documento %>
-    <!--
-      <%= form.number_field :id_tipo_documento %>
-    -->
-
-      <%= form.collection_select :id_tipo_documento, DocumentoIdentidad.order(nombre: :asc), :id, :nombre %> 
-
-  </div>
-
-  <div class="field">
-    <%= form.label :numero_documento %>
-    <%= form.text_field :numero_documento %>
-  </div>
-
-  <div class="field">
-    <%= form.label :nombre %>
-    <%= form.text_field :nombre %>
-  </div>
-
-  <div class="field">
-    <%= form.label :apellido_paterno %>
-    <%= form.text_field :apellido_paterno %>
-  </div>
-
-  <div class="field">
-    <%= form.label :apellido_materno %>
-    <%= form.text_field :apellido_materno %>
-  </div>
-
-  <div class="field">
-    <%= form.label :id_privilegio %>
-    <!--
-      <%= form.number_field :id_privilegio %>
-    -->
-
-    <%= form.collection_select :id_tipo_documento, PrivilegioEmpleado.order(nombre: :asc), :id, :nombre %> 
-
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
-<% end %>
->>>>>>> master
+-->

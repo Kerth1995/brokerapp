@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :proyectos
+  resources :ejemplos
   resources :rols
   resources :rol_usuarios
   resources :tareas

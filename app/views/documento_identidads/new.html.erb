@@ -1,5 +1,16 @@
-<h1>New Documento Identidad</h1>
+  <div class="row">
+    <div class="header col-lg-12 mb-3">
+      <h4><span>Documentos de Identidad</span></h4>
+      <h6><span>Nuevo</span></h6>
+    </div>
+  </div>
 
 <%= render 'form', documento_identidad: @documento_identidad %>
 
-<%= link_to 'Back', documento_identidads_path %>
+<!--
+	<%= link_to 'Back', documento_identidads_path %>
+-->
+
+<div class="row">
+    <%= link_to 'Regresar'.html_safe, documento_identidads_path, Class:"btn btn-secondary btn-sm"%> 
+</div>

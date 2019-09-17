@@ -12,3 +12,5 @@ rails g scaffold empleado id_tipo_documento:integer numero_documento:string{30} 
 rails g scaffold documentoIdentidad nombre:string{50} descripcion:string{100}
 
 rails g scaffold privilegioEmpleado nombre:string{50} descripcion:string{100}
+
+rails g scaffold proyecto id_sector:integer nombre:string{50} fecha_inicio:date fecha_fin:date descripcion:string{100}
