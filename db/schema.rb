@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_09_16_021033) do
+ActiveRecord::Schema.define(version: 2019_09_17_023239) do
 
   create_table "documento_identidads", force: :cascade do |t|
     t.string "nombre", limit: 50, null: false
