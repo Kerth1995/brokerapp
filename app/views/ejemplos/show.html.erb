@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Id tipo documento:</strong>
+  <%= @ejemplo.id_tipo_documento %>
+</p>
+
+<p>
+  <strong>Numero documento:</strong>
+  <%= @ejemplo.numero_documento %>
+</p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @ejemplo.nombre %>
+</p>
+
+<p>
+  <strong>Apellido paterno:</strong>
+  <%= @ejemplo.apellido_paterno %>
+</p>
+
+<p>
+  <strong>Apellido materno:</strong>
+  <%= @ejemplo.apellido_materno %>
+</p>
+
+<p>
+  <strong>Id privilegio:</strong>
+  <%= @ejemplo.id_privilegio %>
+</p>
+
+<%= link_to 'Edit', edit_ejemplo_path(@ejemplo) %> |
+<%= link_to 'Back', ejemplos_path %>

@@ -1,6 +1,19 @@
-<h1>Editing Documento Identidad</h1>
+<div class="main_content">
+  <div class="row">
+    <div class="header col-lg-12 mb-3">
+      <h4><span>Documento de Identidad</span></h4>
+      <h6><span>Edición</span></h6>
+    </div>
+  </div>
+</div>
 
 <%= render 'form', documento_identidad: @documento_identidad %>
 
+<!--
 <%= link_to 'Show', @documento_identidad %> |
 <%= link_to 'Back', documento_identidads_path %>
+-->
+
+<div class="row">
+    <%= link_to 'Regresar'.html_safe, documento_identidads_path, Class:"btn btn-secondary btn-sm"%> 
+</div>

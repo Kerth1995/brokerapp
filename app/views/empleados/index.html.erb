@@ -5,7 +5,7 @@
   <div class="row">
     <div class="header col-lg-12 mb-3">
       <h4><span>Empleados</span></h4>
-      <h6><span>Creación</span></h6>
+      <h6><span>Lista</span></h6>
     </div>
   </div>
 
@@ -15,18 +15,18 @@
         <div class="card-header">
           <div class="row">
             <div class="col-lg-6">
-              <i class="fas fa-table"></i>Lista de Empleados
+              <i class="fas fa-table"></i>Empleados
             </div>
             <div class="col-lg-6 text-right">
-              <%= link_to '<i class="fas fa-user-plus"></i> Nuevo Empleado'.html_safe, 
+              <%= link_to 'Nuevo Empleado'.html_safe, 
                 new_empleado_path, Class:"btn btn-primary btn-sm"%> 
             </div>
           </div>
         </div>
         <div class="card-body">
-          <table class="table table-bordered table-responsive-xl table-striped table-hover" id="example">
-            <thead class="btn-info">
-              <tr>
+          <table class="table table table-hover table-bordered" id="example" >
+            <thead class="table-info">
+              <tr class="text-center">
                 <th>Documento</th>
                 <th>Número</th>
                 <th>Nombres</th>
@@ -46,11 +46,13 @@
                   <td><%= empleado.apellido_paterno %></td>
                   <td><%= empleado.apellido_materno %></td>
                   <td><%= empleado.id_privilegio %></td>
-                  <td>
+                  <!--
+                    <td>
                     <%= link_to '<i class="fas fa-eye"></i>'.html_safe, 
                       empleado
                     %>
                   </td>
+                  -->
                   <td>
                     <%= link_to '<i class="fas fa-user-edit"></i>'.html_safe, 
                       edit_empleado_path(empleado)

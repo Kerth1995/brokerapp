@@ -1,5 +1,4 @@
 <div class="main_content">
-
   <div class="row">
     <div class="header col-lg-12 mb-3">
       <h4><span>Empleados</span></h4>
@@ -7,8 +6,12 @@
     </div>
   </div>
 </div>
+	<%= render 'form', empleado: @empleado %>
+<!--
+	<%= link_to 'Show', @empleado %> |
+	<%= link_to 'Back', empleados_path %>
+-->
 
-<%= render 'form', empleado: @empleado %>
-
-<%= link_to 'Show', @empleado %> |
-<%= link_to 'Back', empleados_path %>
+<div class="row">
+    <%= link_to 'Regresar'.html_safe, empleados_path, Class:"btn btn-secondary btn-sm"%> 
+</div>
