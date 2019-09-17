@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h6>Rols</h6>
+<h1>Rols</h1>
 
 <div class="row mt-3">
   <div class="col-md-12 text-right">
@@ -26,7 +26,7 @@
           <td><%= rol.nombre %></td>
           <td><%= link_to 'Mostrar', rol %></td>
           <td><%= link_to 'Editar', edit_rol_path(rol) %></td>
-          <td><%= link_to 'Eliminar', rol, method: :delete, data: {confirm: 'Estas seguro de eliminar ?'} %></td>
+          <td><%= link_to 'Eliminar', rol, method: :delete, data: {confirm: 'Are you sure?'} %></td>
         </tr>
       <% end %>
       </tbody>

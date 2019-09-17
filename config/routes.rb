@@ -19,7 +19,6 @@ Rails.application.routes.draw do
   get 'tarea/index'
   get 'proyecto/index'
   get 'rol/index'
-  get 'rols/index'
   get 'empleado/index'
   get 'home/index'
   get 'login' => 'login#create', as: :create
@@ -27,6 +26,6 @@ Rails.application.routes.draw do
   get 'empleados/index'
   get 'documento_identidads/index'
   get 'privilegio_empleados/index'
-
+  get 'acti' =>'tareas#index' , as: :acti
 
 end
