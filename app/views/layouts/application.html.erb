@@ -25,7 +25,17 @@
           <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">BROKER ACID</a>
           <ul class="navbar-nav px-3">
               <li class="nav-item text-nowrap">
-                  <a class="nav-link" href="#"><i class="fas fa-power-off"></i> Salir</a>
+                  <a class="nav-link" href="">
+
+
+                    <%= link_to '<i class="fas fa-power-off"></i>'.html_safe, 
+                            login_index_path,
+                            Class:"nav-link "
+                        %>
+                    </a>
+
+
+
               </li>
           </ul>
 
