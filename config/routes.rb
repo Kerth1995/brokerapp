@@ -27,6 +27,6 @@ Rails.application.routes.draw do
   get 'empleados/index'
   get 'documento_identidads/index'
   get 'privilegio_empleados/index'
-
+  get 'acti' =>'tareas#index' , as: :acti
 
 end
