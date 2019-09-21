@@ -1,2 +1,0 @@
-class PrivilegioEmpleado < ApplicationRecord
-end

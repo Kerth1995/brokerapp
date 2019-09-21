@@ -1,17 +1,6 @@
-<div class="main_content">
-  <div class="row">
-    <div class="header col-lg-12 mb-3">
-      <h4><span>Empleados</span></h4>
-      <h6><span>Edición</span></h6>
-    </div>
-  </div>
-</div>
-	<%= render 'form', empleado: @empleado %>
-<!--
-	<%= link_to 'Show', @empleado %> |
-	<%= link_to 'Back', empleados_path %>
--->
+<h1>Editing Empleado</h1>
 
-<div class="row">
-    <%= link_to 'Regresar'.html_safe, empleados_path, Class:"btn btn-secondary btn-sm"%> 
-</div>
+<%= render 'form', empleado: @empleado %>
+
+<%= link_to 'Show', @empleado %> |
+<%= link_to 'Back', empleados_path %>

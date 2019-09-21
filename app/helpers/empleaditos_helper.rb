@@ -1,0 +1,2 @@
+module EmpleaditosHelper
+end

@@ -7,10 +7,10 @@ rails g scaffold rol codigo:string{5} nombre:string{100}
 rails g scaffold rol_usuario usuario_id:integer nombre:string
 
 
-rails g scaffold empleado id_tipo_documento:integer numero_documento:string{30} nombre:string{50} apellido_paterno:string{50} apellido_materno:string{50} id_privilegio:integer{4}
+rails g scaffold empleado documento_id:integer numero_documento:string{30} nombre:string{50} apellido_paterno:string{50} apellido_materno:string{50} privilegio_id:integer
 
-rails g scaffold documentoIdentidad nombre:string{50} descripcion:string{100}
+rails g scaffold documento nombre:string{50} descripcion:string{100}
 
-rails g scaffold privilegioEmpleado nombre:string{50} descripcion:string{100}
+rails g scaffold privilegio nombre:string{50} descripcion:string{100}
 
 rails g scaffold proyecto id_sector:integer nombre:string{50} fecha_inicio:date fecha_fin:date descripcion:string{100}

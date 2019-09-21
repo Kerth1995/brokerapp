@@ -1,17 +1,17 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  id_tipo_documento: 1
+  documento_id: 1
   numero_documento: MyString
   nombre: MyString
   apellido_paterno: MyString
   apellido_materno: MyString
-  id_privilegio: 1
+  privilegio_id: 1
 
 two:
-  id_tipo_documento: 1
+  documento_id: 1
   numero_documento: MyString
   nombre: MyString
   apellido_paterno: MyString
   apellido_materno: MyString
-  id_privilegio: 1
+  privilegio_id: 1

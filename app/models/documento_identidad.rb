@@ -1,3 +1,0 @@
-class DocumentoIdentidad < ApplicationRecord
-
-end

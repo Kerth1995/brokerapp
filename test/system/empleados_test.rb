@@ -16,10 +16,10 @@ class EmpleadosTest < ApplicationSystemTestCase
 
     fill_in "Apellido materno", with: @empleado.apellido_materno
     fill_in "Apellido paterno", with: @empleado.apellido_paterno
-    fill_in "Id privilegio", with: @empleado.id_privilegio
-    fill_in "Id tipo documento", with: @empleado.id_tipo_documento
+    fill_in "Documento", with: @empleado.documento_id
     fill_in "Nombre", with: @empleado.nombre
     fill_in "Numero documento", with: @empleado.numero_documento
+    fill_in "Privilegio", with: @empleado.privilegio_id
     click_on "Create Empleado"
 
     assert_text "Empleado was successfully created"
@@ -32,10 +32,10 @@ class EmpleadosTest < ApplicationSystemTestCase
 
     fill_in "Apellido materno", with: @empleado.apellido_materno
     fill_in "Apellido paterno", with: @empleado.apellido_paterno
-    fill_in "Id privilegio", with: @empleado.id_privilegio
-    fill_in "Id tipo documento", with: @empleado.id_tipo_documento
+    fill_in "Documento", with: @empleado.documento_id
     fill_in "Nombre", with: @empleado.nombre
     fill_in "Numero documento", with: @empleado.numero_documento
+    fill_in "Privilegio", with: @empleado.privilegio_id
     click_on "Update Empleado"
 
     assert_text "Empleado was successfully updated"

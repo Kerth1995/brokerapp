@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  resources :privilegios
+  resources :documentos
+  resources :estudiantes
+  resources :tutors
+  resources :empleaditos
   resources :proyectos
   resources :ejemplos
   resources :rols

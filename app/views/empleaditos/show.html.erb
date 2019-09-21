@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Documento:</strong>
+  <%= @empleadito.documento_id %>
+</p>
+
+<p>
+  <strong>Numero documento:</strong>
+  <%= @empleadito.numero_documento %>
+</p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @empleadito.nombre %>
+</p>
+
+<p>
+  <strong>Apellido paterno:</strong>
+  <%= @empleadito.apellido_paterno %>
+</p>
+
+<p>
+  <strong>Apellido materno:</strong>
+  <%= @empleadito.apellido_materno %>
+</p>
+
+<p>
+  <strong>Id privilegio:</strong>
+  <%= @empleadito.id_privilegio %>
+</p>
+
+<%= link_to 'Edit', edit_empleadito_path(@empleadito) %> |
+<%= link_to 'Back', empleaditos_path %>

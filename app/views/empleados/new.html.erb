@@ -1,15 +1,5 @@
-  <div class="row">
-    <div class="header col-lg-12 mb-3">
-      <h4><span>Empleados</span></h4>
-      <h6><span>Nuevo</span></h6>
-    </div>
-  </div>
+<h1>New Empleado</h1>
 
 <%= render 'form', empleado: @empleado %>
 
-<!--
-	<%= link_to 'Back', ejemplos_path %>
--->
-<div class="row">
-    <%= link_to 'Regresar'.html_safe, empleados_path, Class:"btn btn-secondary btn-sm"%> 
-</div>
+<%= link_to 'Back', empleados_path %>

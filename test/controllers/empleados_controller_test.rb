@@ -17,7 +17,7 @@ class EmpleadosControllerTest < ActionDispatch::IntegrationTest
 
   test "should create empleado" do
     assert_difference('Empleado.count') do
-      post empleados_url, params: { empleado: { apellido_materno: @empleado.apellido_materno, apellido_paterno: @empleado.apellido_paterno, id_privilegio: @empleado.id_privilegio, id_tipo_documento: @empleado.id_tipo_documento, nombre: @empleado.nombre, numero_documento: @empleado.numero_documento } }
+      post empleados_url, params: { empleado: { apellido_materno: @empleado.apellido_materno, apellido_paterno: @empleado.apellido_paterno, documento_id: @empleado.documento_id, nombre: @empleado.nombre, numero_documento: @empleado.numero_documento, privilegio_id: @empleado.privilegio_id } }
     end
 
     assert_redirected_to empleado_url(Empleado.last)
@@ -34,7 +34,7 @@ class EmpleadosControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update empleado" do
-    patch empleado_url(@empleado), params: { empleado: { apellido_materno: @empleado.apellido_materno, apellido_paterno: @empleado.apellido_paterno, id_privilegio: @empleado.id_privilegio, id_tipo_documento: @empleado.id_tipo_documento, nombre: @empleado.nombre, numero_documento: @empleado.numero_documento } }
+    patch empleado_url(@empleado), params: { empleado: { apellido_materno: @empleado.apellido_materno, apellido_paterno: @empleado.apellido_paterno, documento_id: @empleado.documento_id, nombre: @empleado.nombre, numero_documento: @empleado.numero_documento, privilegio_id: @empleado.privilegio_id } }
     assert_redirected_to empleado_url(@empleado)
   end
 

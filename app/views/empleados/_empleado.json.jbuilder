@@ -1,2 +1,2 @@
-json.extract! empleado, :id, :id_tipo_documento, :numero_documento, :nombre, :apellido_paterno, :apellido_materno, :id_privilegio, :created_at, :updated_at
+json.extract! empleado, :id, :documento_id, :numero_documento, :nombre, :apellido_paterno, :apellido_materno, :privilegio_id, :created_at, :updated_at
 json.url empleado_url(empleado, format: :json)
