@@ -1,0 +1,7 @@
+$('#actualizarTarea_<%= @tarea.id%>').modal('hide');
+
+//$('#tarea_<%=@tarea.id%>').remove();
+
+//$('#container_tarea').append('<%= j render @tarea %>');
+
+$('#tarea_nombre<%= @tarea.id%>').html('<%= @tarea.nombre %>');

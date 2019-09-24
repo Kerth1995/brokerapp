@@ -1,0 +1,10 @@
+//alert('Nueva Tarea creada');
+$('#tarea_codigo_tarea').val('');
+$('#tarea_nombre').val('');
+$('#tarea_descripcion').val('');
+$('#tarea_estado').val('');
+$('#tarea_rubro').val('');
+
+$('#modalNuevo').modal('hide');
+
+$('#container_tarea').append('<%= j render @tarea %>');

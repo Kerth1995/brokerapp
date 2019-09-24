@@ -15,6 +15,7 @@ Rails.application.routes.draw do
   resources :emppleados
   resources :usuarios
   resources :login
+
   
   root 'login#index'
   get 'estadistica/index'
@@ -33,5 +34,6 @@ Rails.application.routes.draw do
   get 'documento_identidads/index'
   get 'privilegio_empleados/index'
   get 'acti' =>'tareas#index' , as: :acti
+  
 
 end

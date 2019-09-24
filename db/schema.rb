@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_09_21_210007) do
+ActiveRecord::Schema.define(version: 2019_09_23_002625) do
 
   create_table "documentos", force: :cascade do |t|
     t.string "nombre", limit: 50
@@ -32,10 +32,10 @@ ActiveRecord::Schema.define(version: 2019_09_21_210007) do
 
   create_table "empleados", force: :cascade do |t|
     t.integer "documento_id"
-    t.string "numero_documento", limit: 30
-    t.string "nombre", limit: 50
-    t.string "apellido_paterno", limit: 50
-    t.string "apellido_materno", limit: 50
+    t.string "numero_documento", limit: 30, null: false
+    t.string "nombre", limit: 50, null: false
+    t.string "apellido_paterno", limit: 50, null: false
+    t.string "apellido_materno", limit: 50, null: false
     t.integer "privilegio_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -48,33 +48,9 @@ ActiveRecord::Schema.define(version: 2019_09_21_210007) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "privilegio_empleados", force: :cascade do |t|
-    t.string "nombre", limit: 50, null: false
-    t.string "descripcion", limit: 100, null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "privilegios", force: :cascade do |t|
-    t.string "nombre", limit: 50
-    t.string "descripcion", limit: 100
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "proyectos", force: :cascade do |t|
-    t.integer "id_sector"
     t.string "nombre", limit: 50, null: false
-    t.date "fecha_inicio", null: false
-    t.date "fecha_fin", null: false
     t.string "descripcion", limit: 100, null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "rol_usuarios", force: :cascade do |t|
-    t.integer "usuario_id"
-    t.string "nombre"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -87,10 +63,11 @@ ActiveRecord::Schema.define(version: 2019_09_21_210007) do
   end
 
   create_table "tareas", force: :cascade do |t|
-    t.string "id_tarea", limit: 8, null: false
-    t.string "nombre", limit: 50, null: false
-    t.string "descripcion", limit: 500, null: false
-    t.integer "estado"
+    t.string "codigo_tarea"
+    t.string "nombre"
+    t.string "descripcion"
+    t.string "estado"
+    t.string "rubro"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
