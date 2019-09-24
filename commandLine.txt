@@ -14,3 +14,9 @@ rails g scaffold documento nombre:string{50} descripcion:string{100}
 rails g scaffold privilegio nombre:string{50} descripcion:string{100}
 
 rails g scaffold proyecto id_sector:integer nombre:string{50} fecha_inicio:date fecha_fin:date descripcion:string{100}
+
+
+
+INSERT INTO "main"."documentos" ("id", "nombre", "descripcion", "created_at", "updated_at") VALUES ('1', 'DNI', 'DNI', '2019-09-22 15:35:33.732361', '2019-09-22 15:35:33.732361');
+INSERT INTO "main"."documentos" ("id", "nombre", "descripcion", "created_at", "updated_at") VALUES ('2', 'CARNET DE EXTRANJERÍA', 'CARNET DE EXTRANJERÍA', '2019-09-22 15:36:33.429072', '2019-09-22 15:36:33.429072');
+INSERT INTO "main"."documentos" ("id", "nombre", "descripcion", "created_at", "updated_at") VALUES ('3', 'PASAPORTE', 'PASAPORTE', '2019-09-22 15:37:30.872360', '2019-09-22 15:37:30.872360');
