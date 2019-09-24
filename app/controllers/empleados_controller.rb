@@ -5,6 +5,7 @@ class EmpleadosController < ApplicationController
   # GET /empleados.json
   def index
     @empleados = Empleado.all
+    @empleado = Empleado.new
   end
 
   # GET /empleados/1
@@ -14,7 +15,7 @@ class EmpleadosController < ApplicationController
 
   # GET /empleados/new
   def new
-    @empleado = Empleado.new
+    #@empleado = Empleado.new
   end
 
   # GET /empleados/1/edit
@@ -30,9 +31,11 @@ class EmpleadosController < ApplicationController
       if @empleado.save
         format.html { redirect_to @empleado, notice: 'Empleado was successfully created.' }
         format.json { render :show, status: :created, location: @empleado }
+        format.js
       else
         format.html { render :new }
         format.json { render json: @empleado.errors, status: :unprocessable_entity }
+        format.js
       end
     end
   end
@@ -44,9 +47,11 @@ class EmpleadosController < ApplicationController
       if @empleado.update(empleado_params)
         format.html { redirect_to @empleado, notice: 'Empleado was successfully updated.' }
         format.json { render :show, status: :ok, location: @empleado }
+        format.js
       else
         format.html { render :edit }
         format.json { render json: @empleado.errors, status: :unprocessable_entity }
+        format.js
       end
     end
   end
@@ -58,6 +63,7 @@ class EmpleadosController < ApplicationController
     respond_to do |format|
       format.html { redirect_to empleados_url, notice: 'Empleado was successfully destroyed.' }
       format.json { head :no_content }
+      format.js
     end
   end
 
@@ -69,6 +75,6 @@ class EmpleadosController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def empleado_params
-      params.require(:empleado).permit(:documento_id, :numero_documento, :nombre, :apellido_paterno, :apellido_materno, :privilegio_id)
+      params.require(:empleado).permit(:documento_id, :privilegio_id, :numero_documento, :nombre, :apellido_paterno, :apellido_materno, :estado)
     end
 end

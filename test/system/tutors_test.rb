@@ -14,7 +14,6 @@ class TutorsTest < ApplicationSystemTestCase
     visit tutors_url
     click_on "New Tutor"
 
-    fill_in "Descripcion", with: @tutor.descripcion
     fill_in "Nombre", with: @tutor.nombre
     click_on "Create Tutor"
 
@@ -26,7 +25,6 @@ class TutorsTest < ApplicationSystemTestCase
     visit tutors_url
     click_on "Edit", match: :first
 
-    fill_in "Descripcion", with: @tutor.descripcion
     fill_in "Nombre", with: @tutor.nombre
     click_on "Update Tutor"
 

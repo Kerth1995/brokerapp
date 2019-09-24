@@ -17,6 +17,7 @@ class EmpleadosTest < ApplicationSystemTestCase
     fill_in "Apellido materno", with: @empleado.apellido_materno
     fill_in "Apellido paterno", with: @empleado.apellido_paterno
     fill_in "Documento", with: @empleado.documento_id
+    fill_in "Estado", with: @empleado.estado
     fill_in "Nombre", with: @empleado.nombre
     fill_in "Numero documento", with: @empleado.numero_documento
     fill_in "Privilegio", with: @empleado.privilegio_id
@@ -33,6 +34,7 @@ class EmpleadosTest < ApplicationSystemTestCase
     fill_in "Apellido materno", with: @empleado.apellido_materno
     fill_in "Apellido paterno", with: @empleado.apellido_paterno
     fill_in "Documento", with: @empleado.documento_id
+    fill_in "Estado", with: @empleado.estado
     fill_in "Nombre", with: @empleado.nombre
     fill_in "Numero documento", with: @empleado.numero_documento
     fill_in "Privilegio", with: @empleado.privilegio_id

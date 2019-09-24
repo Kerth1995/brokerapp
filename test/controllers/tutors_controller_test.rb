@@ -17,7 +17,7 @@ class TutorsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create tutor" do
     assert_difference('Tutor.count') do
-      post tutors_url, params: { tutor: { descripcion: @tutor.descripcion, nombre: @tutor.nombre } }
+      post tutors_url, params: { tutor: { nombre: @tutor.nombre } }
     end
 
     assert_redirected_to tutor_url(Tutor.last)
@@ -34,7 +34,7 @@ class TutorsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update tutor" do
-    patch tutor_url(@tutor), params: { tutor: { descripcion: @tutor.descripcion, nombre: @tutor.nombre } }
+    patch tutor_url(@tutor), params: { tutor: { nombre: @tutor.nombre } }
     assert_redirected_to tutor_url(@tutor)
   end
 

@@ -1,0 +1,6 @@
+alert('actualizado');
+
+$('#editarEmpleado_<%= @empleado.id%>').modal('hide');
+
+
+$('#idListaEmpleados').append('<%= render @empleados %>');

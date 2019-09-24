@@ -14,7 +14,9 @@ class EstudiantesTest < ApplicationSystemTestCase
     visit estudiantes_url
     click_on "New Estudiante"
 
+    fill_in "Descripcion", with: @estudiante.descripcion
     fill_in "Nombre", with: @estudiante.nombre
+    fill_in "String", with: @estudiante.string
     fill_in "Tutor", with: @estudiante.tutor_id
     click_on "Create Estudiante"
 
@@ -26,7 +28,9 @@ class EstudiantesTest < ApplicationSystemTestCase
     visit estudiantes_url
     click_on "Edit", match: :first
 
+    fill_in "Descripcion", with: @estudiante.descripcion
     fill_in "Nombre", with: @estudiante.nombre
+    fill_in "String", with: @estudiante.string
     fill_in "Tutor", with: @estudiante.tutor_id
     click_on "Update Estudiante"
 

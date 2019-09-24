@@ -1,3 +1,142 @@
+<div class="main_content">
+
+    <p id="notice"><%= notice %></p>
+
+  <div class="row">
+    <div class="header col-lg-12 mb-3">
+      <h4><span>Empleados</span></h4>
+      <h6><span>Lista</span></h6>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="card">
+        <div class="card-header">
+          <div class="row">
+            <div class="col-lg-6">
+              <i class="fas fa-table"></i>Empleados
+            </div>
+            <div class="col-lg-6 text-right">
+              <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#nuevoEmpleado">
+                Nuevo Empleado
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-body">
+          <table class="table table table-hover table-bordered table-responsive-xl" id="example" >
+            <thead class="table-info">
+              <tr class="text-center">
+                <th>Privilegio</th>
+                <th>Documento</th>
+                <th>N° Documento</th>
+                <th>Nombres</th>
+                <th>A. Paterno</th>
+                <th>A. Materno</th>
+                <th>Estado</th>
+                <th colspan="2">Acciones</th>
+              </tr>
+            </thead>
+            <tbody>
+              <div class="listadoEmpleados" id="idListaEmpleados">
+                <%= render @empleados %>
+              </div>
+            </tbody>
+          </table>
+        </div>
+        <div class="card-footer">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Modal -->
+<%= form_with(model: @empleado) do |form| %>
+  <div class="modal fade" id="nuevoEmpleado" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <div class="field">
+                <%= form.label :'Tipo Documento' %>
+                <!-- <%= form.number_field :documento_id %> -->
+                <%= form.collection_select :documento_id, Documento.order(nombre: :asc), :id, :nombre %> 
+              </div>
+            </div>
+            <div class="form-group col-md-6">
+              <div class="field">
+                <%= form.label :'Tipo Privilegios' %>
+                <!-- <%= form.number_field :privilegio_id %> -->
+                <%= form.collection_select :privilegio_id, Privilegio.order(nombre: :asc), :id, :nombre %> 
+              </div>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <div class="field">
+                <%= form.label :'Número Documento' %>
+                <%= form.text_field :numero_documento, class:"form-control form-control-sm" %>
+              </div>
+            </div>
+            <div class="form-group col-md-6">
+              <div class="field">
+                <%= form.label :'Nombres' %>
+                <%= form.text_field :nombre, class:"form-control form-control-sm" %>
+              </div>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <div class="field">
+                <%= form.label :'Apellido Paterno' %>
+                <%= form.text_field :apellido_paterno, class:"form-control form-control-sm" %>
+              </div>
+            </div>
+            <div class="form-group col-md-6">
+              <div class="field">
+                <%= form.label :'Apellido Materno' %>
+                <%= form.text_field :apellido_materno, class:"form-control form-control-sm" %>
+              </div>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-12">
+              <div class="field">
+                <%= form.label :estado %>
+                 <%= form.number_field :estado %>
+                <!--
+                  <select class="form-control form-control-sm" id="idEstado">
+                  <option>Activo</option>
+                  <option>Inactivo</option>
+                </select>
+                -->
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Cerrar</button>
+          <%= form.submit 'Guardar', class: "btn btn-primary btn-sm" %>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>
+
+
+<!--
 <p id="notice"><%= notice %></p>
 
 <h1>Empleados</h1>
@@ -6,11 +145,12 @@
   <thead>
     <tr>
       <th>Documento</th>
+      <th>Privilegio</th>
       <th>Numero documento</th>
       <th>Nombre</th>
       <th>Apellido paterno</th>
       <th>Apellido materno</th>
-      <th>Privilegio</th>
+      <th>Estado</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -19,11 +159,12 @@
     <% @empleados.each do |empleado| %>
       <tr>
         <td><%= empleado.documento.nombre %></td>
+        <td><%= empleado.privilegio.nombre %></td>
         <td><%= empleado.numero_documento %></td>
         <td><%= empleado.nombre %></td>
         <td><%= empleado.apellido_paterno %></td>
         <td><%= empleado.apellido_materno %></td>
-        <td><%= empleado.privilegio.nombre %></td>
+        <td><%= empleado.estado %></td>
         <td><%= link_to 'Show', empleado %></td>
         <td><%= link_to 'Edit', edit_empleado_path(empleado) %></td>
         <td><%= link_to 'Destroy', empleado, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -35,3 +176,4 @@
 <br>
 
 <%= link_to 'New Empleado', new_empleado_path %>
+-->
