@@ -2,16 +2,18 @@
 
 one:
   documento_id: 1
+  privilegio_id: 1
   numero_documento: MyString
   nombre: MyString
   apellido_paterno: MyString
   apellido_materno: MyString
-  privilegio_id: 1
+  estado: 1
 
 two:
   documento_id: 1
+  privilegio_id: 1
   numero_documento: MyString
   nombre: MyString
   apellido_paterno: MyString
   apellido_materno: MyString
-  privilegio_id: 1
+  estado: 1

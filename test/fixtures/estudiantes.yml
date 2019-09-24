@@ -3,7 +3,11 @@
 one:
   tutor_id: 1
   nombre: MyString
+  string: MyString
+  descripcion: MyString
 
 two:
   tutor_id: 1
   nombre: MyString
+  string: MyString
+  descripcion: MyString
